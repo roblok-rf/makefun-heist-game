@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Meridian Job — a top-down stealth heist game in three jobs. Cross the room, crack the case, walk out rich.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0e14'/%3E%3Cpath d='M16 5 L26 16 L16 27 L6 16 Z' fill='%23e8b64c'/%3E%3C/svg%3E">
+<title>The Meridian Job — a top-down stealth heist game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #07090d;
+    color: #e8e4d8;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  canvas {
+    display: block;
+    width: 1280px;
+    max-width: 96vw;
+    height: auto;
+    background: #0a0e14;
+    border: 1px solid #3a4552;
+    box-shadow: 0 0 60px rgba(232, 182, 76, 0.12);
+  }
+  .under {
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    color: #8b9bb4;
+  }
+  .under span b { color: #e8b64c; }
+  #mute-note { color: #e8b64c; min-height: 1em; }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<div class="under">
+  <span><b>WASD</b> move &nbsp; <b>Shift</b> sneak &nbsp; <b>E</b> hold to crack &nbsp; <b>Q</b> smoke &nbsp; <b>Click</b> throw coin</span>
+  <span><b>P</b> pause &nbsp; <b>M</b> mute</span>
+  <span id="mute-note"></span>
+</div>
+<noscript><p style="text-align:center">The Meridian Job needs JavaScript to play.</p></noscript>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
